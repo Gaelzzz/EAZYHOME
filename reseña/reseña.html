@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reseñas - EazyHome</title>
+  <link rel="stylesheet" href="reseña.css" />
+</head>
+<body>
+
+  
+<!-- ENCABEZADO -->
+<header>
+  <div class="logo">
+    <a href="principal.html"><img src="logo.png" alt="Logo EazyHome"></a>
+  </div>
+  <div class="acciones">
+    <a href="../login/login.html">
+  <button class="btn-login">Inicio de Sesión</button>
+</a> 
+<a href="../registro/index.html">
+    <button class="btn-register">Registrarse</button>
+</a>     
+  </div>
+</header>
+
+
+  <!-- SECCIÓN DE RESEÑAS -->
+  <section class="resenas">
+    <h2>Reseñas de Usuarios</h2>
+    <div class="tarjetas-resenas">
+
+      <div class="reseña">
+        <p>"Excelente servicio y puntualidad."</p>
+        <p>⭐️⭐️⭐️⭐️⭐️</p>
+        <div class="autor">
+          <img src="avatar.jpg" alt="Usuario">
+          <div>
+            <p><strong>Andrea López</strong></p>
+            <p>Electricista</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reseña">
+        <p>"Muy amables y eficientes."</p>
+        <p>⭐️⭐️⭐️⭐️⭐️</p>
+        <div class="autor">
+          <img src="avatar.jpg" alt="Usuario">
+          <div>
+            <p><strong>José Martínez</strong></p>
+            <p>Limpieza</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reseña">
+        <p>"Gran calidad en el trabajo, los recomiendo."</p>
+        <p>⭐️⭐️⭐️⭐️⭐️</p>
+        <div class="autor">
+          <img src="avatar.jpg" alt="Usuario">
+          <div>
+            <p><strong>Carla Rivera</strong></p>
+            <p>Jardinería</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reseña">
+        <p>"Fácil de usar y rápida atención."</p>
+        <p>⭐️⭐️⭐️⭐️</p>
+        <div class="autor">
+          <img src="avatar.jpg" alt="Usuario">
+          <div>
+            <p><strong>Luis Torres</strong></p>
+            <p>Plomería</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+   <!-- FORMULARIO PARA NUEVA RESEÑA -->
+<div style="margin-top: 50px; text-align: center;">
+  <h2>Escribe tu reseña</h2>
+    <label for="calificacion">Calificación:</label><br>
+    <select id="calificacion" name="calificacion" required style="width: 100%; padding: 10px; margin-bottom: 15px;">
+      <option value="">Selecciona</option>
+      <option value="⭐️">⭐️</option>
+      <option value="⭐️⭐️">⭐️⭐️</option>
+      <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
+      <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
+      <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
+    </select><br>
+
+    <label for="comentario">Comentario:</label><br>
+    <textarea id="comentario" name="comentario" rows="4" required style="width: 100%; padding: 10px; margin-bottom: 20px;"></textarea><br>
+
+    <button class="btn-enviar" type="submit">Enviar Reseña</button>
+  </form>
+</div>
+
+
+    <!-- Botón para volver -->
+    <div style="text-align:center; margin-top: 40px;">
+      <a href="../principal/principal.html">
+  <button class="btn-inicio">Volver a Inicio</button>
+</a> 
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <p><strong>EazyHome</strong></p>
+        <div class="social-icons">
+          <img src="img/fb.png" alt="Facebook">
+          <img src="img/ig.png" alt="Instagram">
+          <img src="img/mail.png" alt="Correo">
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#">Términos y condiciones</a>
+        <a href="#">Legal</a>
+        <a href="#">Contacto</a>
+        <a href="#">Política de privacidad</a>
+      </div>
+      <div class="footer-btn">
+        <button class="btn-arrow">↗</button>
+      </div>
+    </div>
+  </footer>
+
+  
+  <script>
+    function enviarResena() {
+      const nombre = document.getElementById('nombre').value;
+      const calificacion = document.getElementById('calificacion').value;
+      const comentario = document.getElementById('comentario').value;
+
+      if (nombre && calificacion && comentario) {
+        alert("¡Gracias por tu reseña, " + nombre + "!");
+        
+        return false; 
+      }
+    }
+  </script>
+
+</body>
+</html>
